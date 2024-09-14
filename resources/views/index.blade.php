@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - UpConstruction Bootstrap Template</title>
+    <title>Opendoorz Landing Page</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/favicon-32x32.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
@@ -44,20 +44,14 @@
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="/" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1 class="sitename">UpConstruction</h1> <span>.</span>
+                <h1 class="sitename">Opendoorz</h1> <span>.</span>
             </a>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    {{-- <li><a href="/" class="active">Home</a></li> --}}
-                    {{-- <li><a href="/about">About</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/projects">Projects</a></li>
-                    <li><a href="/blog">Blog</a></li>
-                    <li><a href="/contact">Contact</a></li> --}}
                     @include('components.navlink')
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -75,11 +69,12 @@
                 <div class="container">
                     <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
                         <div class="col-lg-6 text-center">
-                            <h2>Welcome to UpConstruction</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="#get-started" class="btn-get-started">Get Started</a>
+                            <h2>Welcome to Opendoorz Real State</h2>
+                            <p>We are thrilled to have you explore our diverse range
+                                of properties. At Opendoorz, we are dedicated to providing exceptional service and
+                                helping you find the perfect home or investment opportunity. Our team is here to assist
+                                you every step of the way, ensuring a seamless and rewarding experience.</p>
+                            <a href="/login" class="btn-get-started">Get Started</a>
                         </div>
                     </div>
                 </div>
@@ -128,30 +123,34 @@
 
                     <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
                         <div class="content">
-                            <h3>Minus hic non reiciendis ea possimus at quia.</h3>
-                            <p>Rem id rerum. Debitis deserunt quidem delectus expedita ducimus dolor. Aut iusto ipsa.
-                                Eos ipsum nobis ipsa soluta itaque perspiciatis fuga ipsum perspiciatis. Eum amet fugiat
-                                totam nisi possimus ut delectus dicta.
+                            <h3>More Information About Us</h3>
+                            <p>At our company, we are committed to delivering exceptional real estate services that
+                                prioritize quality and customer satisfaction. Our team of experts specializes in
+                                property management, home improvement, and real estate consulting, offering tailored
+                                solutions to meet the unique needs of each client.
                             </p>
-                            <p>Aliquam velit deserunt autem. Inventore et saepe. Tenetur suscipit eligendi labore culpa
-                                eos. Deserunt porro magni qui necessitatibus dolorem at animi cupiditate.</p>
+                            <p>We believe in creating lasting relationships through our dedication to excellence and
+                                personalized service. Whether you’re looking to manage your property efficiently,
+                                enhance your home, we provide the expertise and
+                                support needed to achieve your goals.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
                         <form action="forms/quote.php" method="post" class="php-email-form">
-                            <h3>Get a quote</h3>
-                            <p>Vel nobis odio laboriosam et hic voluptatem. Inventore vitae totam. Rerum repellendus
-                                enim linead sero park flows.</p>
+                            <h3>Let's Sign Up</h3>
+                            <p>Register now to get detailed information about our available properties, including
+                                specifications and etc.
+                            </p>
                             <div class="row gy-3">
 
                                 <div class="col-12">
-                                    <input type="text" name="name" class="form-control" placeholder="Name"
+                                    <input type="text" name="email" class="form-control" placeholder="Email"
                                         required="">
                                 </div>
 
                                 <div class="col-12 ">
-                                    <input type="email" class="form-control" name="email" placeholder="Email"
+                                    <input type="email" class="form-control" name="name" placeholder="username"
                                         required="">
                                 </div>
 
@@ -161,7 +160,13 @@
                                 </div>
 
                                 <div class="col-12">
-                                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                                    <input type="password" class="form-control" name="password"
+                                        placeholder="Password" required="">
+                                </div>
+
+                                <div class="col-12">
+                                    <input type="password" class="form-control" name="password"
+                                        placeholder="Reconfirm Password" required="">
                                 </div>
 
                                 <div class="col-12 text-center">
@@ -170,7 +175,7 @@
                                     <div class="sent-message">Your quote request has been sent successfully. Thank you!
                                     </div>
 
-                                    <button type="submit">Get a quote</button>
+                                    <button type="submit">Sign Up</button>
                                 </div>
 
                             </div>
@@ -188,8 +193,9 @@
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Constructions</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <h2>Planning Your Dream House</h2>
+                <p>Effective planning is crucial for creating your dream home, ensuring every detail aligns with your
+                    vision and goals.</p>
             </div><!-- End Section Title -->
 
             <div class="container">
@@ -205,10 +211,10 @@
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <h4 class="card-title">Eligendi omnis sunt veritatis.</h4>
-                                        <p>Fuga in dolorum et iste et culpa. Commodi possimus nesciunt modi voluptatem
-                                            placeat deleniti adipisci. Cum delectus doloribus non veritatis. Officia
-                                            temporibus illo magnam. Dolor eos et.</p>
+                                        <h4 class="card-title">Initial Consultation.</h4>
+                                        <p>Meet with an architect to discuss your needs, lifestyle, and budget. This
+                                            helps in designing a home that aligns with your preferences and constraints.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -224,10 +230,10 @@
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <h4 class="card-title">Possimus ut sed velit assumenda</h4>
-                                        <p>Sunt deserunt maiores voluptatem autem est rerum perferendis rerum
-                                            blanditiis. Est laboriosam qui iste numquam laboriosam voluptatem
-                                            architecto. Est laudantium sunt at quas aut hic. Eum dignissimos.</p>
+                                        <h4 class="card-title">Conceptual Design</h4>
+                                        <p>The architect creates preliminary sketches and layout plans reflecting your
+                                            requirements and preferences, including room arrangement and functionality.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -243,10 +249,11 @@
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <h4 class="card-title">Error beatae dolor inventore aut</h4>
-                                        <p>Dicta porro nobis. Velit cum in. Nesciunt dignissimos enim molestiae facilis
-                                            numquam quae quaerat ipsam omnis. Neque debitis ipsum at architecto officia
-                                            laboriosam odit. Ut sunt temporibus nulla culpa.</p>
+                                        <h4 class="card-title">Detailed Design</h4>
+                                        <p>Finalize the design with technical details such as building materials, room
+                                            dimensions, and mechanical systems. This ensures accuracy and compliance
+                                            with standards.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -262,10 +269,10 @@
                                 </div>
                                 <div class="col-xl-7 d-flex align-items-center">
                                     <div class="card-body">
-                                        <h4 class="card-title">Expedita voluptas ut ut nesciunt</h4>
-                                        <p>Aut est quidem doloremque voluptatem magnam quis excepturi vero quia. Eum eos
-                                            doloremque architecto illo at beatae dolore. Fugiat suscipit et sint ratione
-                                            dolores. Aut aliquid ea dolores libero nobis.</p>
+                                        <h4 class="card-title">Permit Application</h4>
+                                        <p>Submit the design plans to local authorities to obtain construction permits.
+                                            This process ensures that the design meets regulations and can be legally
+                                            executed.</p>
                                     </div>
                                 </div>
                             </div>
@@ -283,8 +290,9 @@
 
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
-                <h2>Services</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <h2>Our Services</h2>
+                <p>We provide a range of expert solutions tailored to meet your housing needs, ensuring optimal
+                    management and security of your residential properties.</p>
             </div><!-- End Section Title -->
 
             <div class="container">
@@ -296,9 +304,10 @@
                             <div class="icon">
                                 <i class="fa-solid fa-mountain-city"></i>
                             </div>
-                            <h3>Nesciunt Mete</h3>
-                            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores
-                                iure perferendis tempore et consequatur.</p>
+                            <h3>Property Management Services</h3>
+                            <p>We provide comprehensive property management solutions to ensure your residential
+                                properties are well-maintained and efficiently managed. Our services include tenant
+                                screening, lease management, maintenance coordination, and rent collection.</p>
                             <a href="#" class="readmore stretched-link">Read more <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
@@ -309,9 +318,10 @@
                             <div class="icon">
                                 <i class="fa-solid fa-arrow-up-from-ground-water"></i>
                             </div>
-                            <h3>Eosle Commodi</h3>
-                            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum
-                                hic non ut nesciunt dolorem.</p>
+                            <h3>Home Renovation</h3>
+                            <p>Our team specializes in home renovation and improvement projects. Whether you’re looking
+                                to upgrade your kitchen, remodel your bathroom, or add new features to your home, we
+                                offer expert advice and high-quality craftsmanship to enhance your living space.</p>
                             <a href="#" class="readmore stretched-link">Read more <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
@@ -322,9 +332,10 @@
                             <div class="icon">
                                 <i class="fa-solid fa-compass-drafting"></i>
                             </div>
-                            <h3>Ledo Markt</h3>
-                            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id
-                                voluptas adipisci eos earum corrupti.</p>
+                            <h3>Real Estate Consulting</h3>
+                            <p>We offer professional real estate consulting services to guide you through buying,
+                                selling, or investing in residential properties. Our experts provide market analysis,
+                                property evaluations, and strategic advice to help you make informed decisions.</p>
                             <a href="#" class="readmore stretched-link">Read more <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
@@ -335,9 +346,10 @@
                             <div class="icon">
                                 <i class="fa-solid fa-trowel-bricks"></i>
                             </div>
-                            <h3>Asperiores Commodit</h3>
-                            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga
-                                sit provident adipisci neque.</p>
+                            <h3>Interior Design Services</h3>
+                            <p>Transform your living spaces with our interior design services. We create personalized
+                                design plans that reflect your style and preferences, from selecting furnishings and
+                                décor to optimizing space functionality and aesthetics.</p>
                             <a href="#" class="readmore stretched-link">Read more <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
@@ -348,9 +360,10 @@
                             <div class="icon">
                                 <i class="fa-solid fa-helmet-safety"></i>
                             </div>
-                            <h3>Velit Doloremque</h3>
-                            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed
-                                animi at autem alias eius labore.</p>
+                            <h3>Home Security Solutions</h3>
+                            <p>Ensure the safety and security of your home with our advanced security solutions. We
+                                provide installation and monitoring of security systems, including alarms, surveillance
+                                cameras, and smart home technology to protect your property.</p>
                             <a href="#" class="readmore stretched-link">Read more <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
@@ -361,9 +374,10 @@
                             <div class="icon">
                                 <i class="fa-solid fa-arrow-up-from-ground-water"></i>
                             </div>
-                            <h3>Dolori Architecto</h3>
-                            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure.
-                                Corrupti recusandae ducimus enim.</p>
+                            <h3>Landscaping Services</h3>
+                            <p>Enhance the exterior of your home with our landscaping and outdoor services. We offer
+                                design and maintenance for gardens, lawns, and outdoor living spaces, creating beautiful
+                                and functional environments for relaxation and entertainment.</p>
                             <a href="#" class="readmore stretched-link">Read more <i
                                     class="bi bi-arrow-right"></i></a>
                         </div>
@@ -386,43 +400,46 @@
 
                     <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up"
                         data-aos-delay="200">
-                        <h3>Enim quis est voluptatibus aliquid consequatur fugiat</h3>
-                        <p>Esse voluptas cumque vel exercitationem. Reiciendis est hic accusamus. Non ipsam et sed
-                            minima temporibus laudantium. Soluta voluptate sed facere corporis dolores excepturi</p>
+                        <h3>Company Vision</h3>
+                        <p>Our vision is to lead the industry with innovative solutions and exceptional service,
+                            creating lasting value and satisfaction for our clients.</p>
 
                         <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
                             <i class="bi bi-easel flex-shrink-0"></i>
                             <div>
-                                <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-                                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-                                    occaecati cupiditate non provident</p>
+                                <h4><a href="" class="stretched-link">Transformative Property Management</a>
+                                </h4>
+                                <p>We aspire to redefine property management through exceptional service and innovative
+                                    solutions, maximizing the value and performance of each clients investment.</p>
                             </div>
                         </div><!-- End Icon Box -->
 
                         <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
                             <i class="bi bi-patch-check flex-shrink-0"></i>
                             <div>
-                                <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-                                    voluptatum deleniti atque</p>
+                                <h4><a href="" class="stretched-link">Elevating Home Experiences</a></h4>
+                                <p>Our vision is to enhance and personalize living spaces, delivering home improvements
+                                    that not only meet but exceed our clients' expectations, creating environments of
+                                    comfort and style.</p>
                             </div>
                         </div><!-- End Icon Box -->
 
                         <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="500">
                             <i class="bi bi-brightness-high flex-shrink-0"></i>
                             <div>
-                                <h4><a href="" class="stretched-link">Dine Pad</a></h4>
-                                <p>Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit. Sunt aut
-                                    deserunt minus aut eligendi omnis</p>
+                                <h4><a href="" class="stretched-link">Empowering Real Estate Decisions</a></h4>
+                                <p>We aim to guide clients with expert real estate consulting, offering insights and
+                                    strategies that enable them to navigate the market confidently and make informed
+                                    choices.</p>
                             </div>
                         </div><!-- End Icon Box -->
 
                         <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
                             <i class="bi bi-brightness-high flex-shrink-0"></i>
                             <div>
-                                <h4><a href="" class="stretched-link">Tride clov</a></h4>
-                                <p>Est voluptatem labore deleniti quis a delectus et. Saepe dolorem libero sit non
-                                    aspernatur odit amet. Et eligendi</p>
+                                <h4><a href="" class="stretched-link">Building Trusted Partnerships</a></h4>
+                                <p>We are dedicated to cultivating lasting relationships based on transparency and
+                                    trust, ensuring a seamless and rewarding real estate journey for every client.</p>
                             </div>
                         </div><!-- End Icon Box -->
 
@@ -443,28 +460,28 @@
                     <li class="nav-item col-3" role="presentation">
                         <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1"
                             aria-selected="true" role="tab">
-                            <h4>Modisit</h4>
+                            <h4>Transformative</h4>
                         </a>
                     </li><!-- End tab nav item -->
 
                     <li class="nav-item col-3" role="presentation">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2"
                             aria-selected="false" tabindex="-1" role="tab">
-                            <h4>Praesenti</h4>
+                            <h4>Elevating</h4>
                         </a><!-- End tab nav item -->
 
                     </li>
                     <li class="nav-item col-3" role="presentation">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3"
                             aria-selected="false" tabindex="-1" role="tab">
-                            <h4>Explica</h4>
+                            <h4>Empowering</h4>
                         </a>
                     </li><!-- End tab nav item -->
 
                     <li class="nav-item col-3" role="presentation">
                         <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4"
                             aria-selected="false" tabindex="-1" role="tab">
-                            <h4>Nostrum</h4>
+                            <h4>Building</h4>
                         </a>
                     </li><!-- End tab nav item -->
 
@@ -476,7 +493,7 @@
                         <div class="row">
                             <div
                                 class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                                <h3>Voluptatem dignissimos provident</h3>
+                                <h3>Transformative Property Management</h3>
                                 <p class="fst-italic">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore
@@ -502,7 +519,7 @@
                         <div class="row">
                             <div
                                 class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                                <h3>Neque exercitationem debitis</h3>
+                                <h3>Elevating Home Experiences</h3>
                                 <p class="fst-italic">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore
@@ -531,7 +548,7 @@
                         <div class="row">
                             <div
                                 class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                                <h3>Voluptatibus commodi accusamu</h3>
+                                <h3>Empowering Real Estate Decisions</h3>
                                 <ul>
                                     <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea
                                             commodo consequat.</span></li>
@@ -557,7 +574,7 @@
                         <div class="row">
                             <div
                                 class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0 d-flex flex-column justify-content-center">
-                                <h3>Omnis fugiat ea explicabo sunt</h3>
+                                <h3>Building Trusted Partnerships</h3>
                                 <p class="fst-italic">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore
@@ -591,7 +608,8 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Projects</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <p>Explore our residential projects, showcasing our commitment to exceptional quality and innovative
+                    solutions in every home we develop</p>
             </div><!-- End Section Title -->
 
             <div class="container">
@@ -803,7 +821,8 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Testimonials</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <p>Hear from our satisfied clients about how our expert services have transformed their homes and
+                    enhanced their living experiences</p>
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -965,7 +984,9 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Recent Blog Posts</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                <p>Stay updated with our latest insights and tips on residential living, property trends, and home
+                    improvement
+                </p>
             </div><!-- End Section Title -->
 
             <div class="container">
@@ -1081,7 +1102,7 @@
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-6 footer-about">
-                    <a href="index.html" class="logo d-flex align-items-center">
+                    <a href="/" class="logo d-flex align-items-center">
                         <span class="sitename">UpConstruction</span>
                     </a>
                     <div class="footer-contact pt-3">

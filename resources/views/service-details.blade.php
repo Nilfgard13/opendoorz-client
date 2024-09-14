@@ -1,5 +1,7 @@
 <x-layout_landing>
     <x-slot:title>{{ $title }}</x-slot:title>
+    <x-slot:header>{{ $header }}</x-slot:header>
+    <x-slot:breadcrumbs>{{ $breadcrumbs }}</x-slot:breadcrumbs>
     <!-- Service Details Section -->
     <section id="service-details" class="service-details section">
 

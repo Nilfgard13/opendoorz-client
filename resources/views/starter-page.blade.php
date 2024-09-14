@@ -1,5 +1,7 @@
 <x-layout_landing>
     <x-slot:title>{{ $title }}</x-slot:title>
+    <x-slot:header>{{ $header }}</x-slot:header>
+    <x-slot:breadcrumbs>{{ $breadcrumbs }}</x-slot:breadcrumbs>
     <!-- Starter Section Section -->
     <section id="starter-section" class="starter-section section">
 
