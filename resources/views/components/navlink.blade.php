@@ -57,6 +57,8 @@
                 @endforeach
             </ul>
         </li>
+    @elseif($item['url'] === '/' && Request::is('/'))
+        <li><a href="{{ $item['url'] }}" class="active">{{ $item['label'] }}</a></li>
     @else
         <li><a href="{{ $item['url'] }}" class="{{ Request::is(ltrim($item['url'], '/')) ? 'active' : '' }}">
                 {{ $item['label'] }}
