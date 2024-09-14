@@ -6,6 +6,19 @@
     <section id="blog-posts" class="blog-posts section">
 
         <div class="container">
+
+            <!-- Search Form -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-8">
+                    <form action="#" method="GET" class="search-form">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="Search blog...">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- End Search Form -->
+
             <div class="row gy-4">
 
                 <div class="col-lg-4">

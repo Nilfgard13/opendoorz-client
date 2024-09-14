@@ -56,7 +56,7 @@
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="row gy-4">
+            <div class="row gy-4 justify-content-center">
 
                 <div class="col-lg-3 col-md-6">
                     <div class="stats-item d-flex align-items-center w-100 h-100">
@@ -80,7 +80,7 @@
                     </div>
                 </div><!-- End Stats Item -->
 
-                <div class="col-lg-3 col-md-6">
+                {{-- <div class="col-lg-3 col-md-6">
                     <div class="stats-item d-flex align-items-center w-100 h-100">
                         <i class="bi bi-headset color-green flex-shrink-0"></i>
                         <div>
@@ -89,7 +89,7 @@
                             <p>Hours Of Support</p>
                         </div>
                     </div>
-                </div><!-- End Stats Item -->
+                </div><!-- End Stats Item --> --}}
 
                 <div class="col-lg-3 col-md-6">
                     <div class="stats-item d-flex align-items-center w-100 h-100">

@@ -15,23 +15,23 @@ Route::get('/register', function () {
 });
 
 Route::get('/about', function () {
-    return view('about', ['title' => 'About', 'header' => 'About', 'breadcrumbs' => 'About']);
+    return view('user/about', ['title' => 'About', 'header' => 'About', 'breadcrumbs' => 'About']);
 });
 
 Route::get('/services', function () {
-    return view('services', ['title' => 'Services', 'header' => 'Services', 'breadcrumbs' => 'Services']);
+    return view('user/services', ['title' => 'Services', 'header' => 'Services', 'breadcrumbs' => 'Services']);
 });
 
-Route::get('/projects', function () {
-    return view('projects', ['title' => 'Projects', 'header' => 'Projects', 'breadcrumbs' => 'Projects']);
+Route::get('/properties', function () {
+    return view('user/properties', ['title' => 'Properties', 'header' => 'Properties', 'breadcrumbs' => 'Properties']);
 });
 
 Route::get('/blog', function () {
-    return view('blog', ['title' => 'Blog', 'header' => 'Blog', 'breadcrumbs' => 'Blog']);
+    return view('user/blog', ['title' => 'Blog', 'header' => 'Blog', 'breadcrumbs' => 'Blog']);
 });
 
 Route::get('/contact', function () {
-    return view('contact', ['title' => 'Contact', 'header' => 'Contact', 'breadcrumbs' => 'Contact']);
+    return view('user/contact', ['title' => 'Contact', 'header' => 'Contact', 'breadcrumbs' => 'Contact']);
 });
 
 // Route::get('/Dropdown', function () {

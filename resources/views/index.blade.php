@@ -619,10 +619,10 @@
 
                     <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
                         <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-remodeling">Remodeling</li>
-                        <li data-filter=".filter-construction">Construction</li>
-                        <li data-filter=".filter-repairs">Repairs</li>
-                        <li data-filter=".filter-design">Design</li>
+                        <li data-filter=".filter-remodeling">Unit 1</li>
+                        <li data-filter=".filter-construction">Unit 2</li>
+                        <li data-filter=".filter-repairs">Unit 3</li>
+                        <li data-filter=".filter-design">Unit 4</li>
                     </ul><!-- End Portfolio Filters -->
 
                     <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">

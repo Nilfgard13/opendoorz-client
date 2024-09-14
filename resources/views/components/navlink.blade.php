@@ -3,7 +3,7 @@
         ['url' => '/', 'label' => 'Home'],
         ['url' => '/about', 'label' => 'About'],
         ['url' => '/services', 'label' => 'Services'],
-        ['url' => '/projects', 'label' => 'Projects'],
+        ['url' => '/properties', 'label' => 'Properties'],
         ['url' => '/blog', 'label' => 'Blog'],
         [
             'url' => '#',
