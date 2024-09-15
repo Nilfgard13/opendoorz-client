@@ -60,3 +60,7 @@ Route::get('/admin-blog', function () {
     return view('admin/blog', ['title' => 'Management Blog']);
 });
 
+Route::get('/admin-profile', function () {
+    return view('admin/profile', ['title' => 'Management Blog']);
+});
+
