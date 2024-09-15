@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+//User Route
 Route::get('/', function () {
     return view('index',);
 });
@@ -34,6 +35,28 @@ Route::get('/contact', function () {
     return view('user/contact', ['title' => 'Contact', 'header' => 'Contact', 'breadcrumbs' => 'Contact']);
 });
 
-// Route::get('/Dropdown', function () {
-//     return view('index');
-// });
+//Admin Route
+Route::get('/admin', function () {
+    return view('admin/dashboard', ['title' => 'Dashboard']);
+});
+
+Route::get('/admin-property', function () {
+    return view('admin/product', ['title' => 'Management Property']);
+});
+
+Route::get('/admin-user', function () {
+    return view('admin/user', ['title' => 'Management User']);
+});
+
+Route::get('/admin-review', function () {
+    return view('admin/review', ['title' => 'Management Review']);
+});
+
+Route::get('/admin-rotator', function () {
+    return view('admin/rotator', ['title' => 'Management Rotator']);
+});
+
+Route::get('/admin-blog', function () {
+    return view('admin/blog', ['title' => 'Management Blog']);
+});
+
