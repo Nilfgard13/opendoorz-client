@@ -35,7 +35,7 @@
                                 <li><a href="contacts.html">Contacts</a></li>
                                 <li><a href="mailbox.html">Mailbox</a></li>
                                 <li class="divider"></li>
-                                <li><a href="login.html">Logout</a></li>
+                                <li><a href="{{ route('logout') }}">Logout</a></li>
                             </ul>
                         </div>
                         <div class="logo-element">
@@ -55,9 +55,9 @@
                             <x-navbar href="/admin-blog">Management Blog</x-navbar>
                         </ul>
                     </li>
-                    
+
                     <li class="special_link">
-                        <a href="package.html"><i class="fa fa-sign-out"></i> <span class="nav-label">Log out</span></a>
+                        <a href="{{ route('logout') }}"><i class="fa fa-sign-out"></i> <span class="nav-label">Log out</span></a>
                     </li>
                 </ul>
 
@@ -183,7 +183,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="login.html">
+                            <a href="{{ route('logout') }}">
                                 <i class="fa fa-sign-out"></i> Log out
                             </a>
                         </li>
@@ -385,6 +385,83 @@
     <!-- Sparkline -->
     <script src="admin_assets/js/plugins/sparkline/jquery.sparkline.min.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const table = $('#productsTable').DataTable();
+
+            // Function to fetch products data
+            function fetchProducts() {
+                fetch('/api/products')
+                    .then(response => response.json())
+                    .then(data => {
+                        table.clear();
+                        data.forEach(product => {
+                            table.row.add([
+                                product.title,
+                                product.description,
+                                product.price,
+                                product.location,
+                                product.type,
+                                product.status,
+                                product.category_id,
+                                product.property_id,
+                                product.images.length > 0 ?
+                                `<img src="${product.images[0]}" alt="${product.title}" style="width: 50px; height: 50px; object-fit: cover;">` :
+                                'No Image',
+                                `<a href="#" class="btn btn-outline btn-success btn-sm edit-product" data-id="${product.id}">Edit</a>
+                         <form action="#" method="POST" class="d-inline delete-product-form">
+                             @csrf
+                             @method('DELETE')
+                             <button type="submit" class="btn btn-outline btn-danger btn-sm">Delete</button>
+                         </form>`
+                            ]);
+                        });
+                        table.draw();
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+
+            // Fetch products on page load
+            fetchProducts();
+
+            // Handle product creation/editing
+            $('#productForm').on('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(this);
+                const productId = formData.get('id');
+                const url = productId ? `/api/products/${productId}` : '/api/products';
+                const method = productId ? 'PUT' : 'POST';
+
+                fetch(url, {
+                        method: method,
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            fetchProducts();
+                            $('#productModal').modal('hide');
+                        } else {
+                            // Handle errors
+                            console.error('Error:', data.message);
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            });
+
+            // Auto-fill property_id when creating a new product
+            $('#createProductBtn').on('click', function() {
+                fetch('/api/properties/latest')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.id) {
+                            $('#property_id').val(data.id);
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            });
+        });
+    </script>
 
     <script>
         $(document).ready(function() {

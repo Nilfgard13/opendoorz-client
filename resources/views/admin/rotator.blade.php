@@ -82,34 +82,52 @@
                                                         aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                         aria-sort="ascending"
                                                         aria-label="Rendering engine: activate to sort column descending"
-                                                        style="width: 240.115px;">Rendering engine</th>
+                                                        style="width: 240.115px;">Name</th>
                                                     <th class="sorting" tabindex="0"
                                                         aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                         aria-label="Browser: activate to sort column ascending"
-                                                        style="width: 297.021px;">Browser</th>
+                                                        style="width: 297.021px;">Nomor</th>
                                                     <th class="sorting" tabindex="0"
                                                         aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                         aria-label="Platform(s): activate to sort column ascending"
-                                                        style="width: 267.073px;">Platform(s)</th>
+                                                        style="width: 267.073px;">Created At(s)</th>
                                                     <th class="sorting" tabindex="0"
                                                         aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                         aria-label="Engine version: activate to sort column ascending"
-                                                        style="width: 205.552px;">Engine version</th>
+                                                        style="width: 205.552px;">Updated At</th>
                                                     <th class="sorting" tabindex="0"
                                                         aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
                                                         aria-label="CSS grade: activate to sort column ascending"
-                                                        style="width: 146.906px;">CSS grade</th>
+                                                        style="width: 146.906px;">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="gradeA odd" role="row">
-                                                    <td class="sorting_1">Gecko</td>
-                                                    <td>Firefox 1.0</td>
-                                                    <td>Win 98+ / OSX.2+</td>
-                                                    <td class="center">1.7</td>
-                                                    <td class="center">A</td>
-                                                </tr>
-                                                
+                                                @forelse($nomors as $nomor)
+                                                    <tr class="gradeA odd" role="row">
+                                                        <td>{{ $nomor['name'] }}
+                                                        </td>
+                                                        <td>{{ $nomor['nomor'] }}
+                                                        </td>
+                                                        <td>{{ $nomor['created_at'] }}
+                                                        </td>
+                                                        <td>{{ $nomor['updated_at'] }}
+                                                        </td>
+                                                        <td>
+                                                            <a href="#"
+                                                                class="btn btn-outline btn-success btn-sm">Edit</a>
+                                                            <form action="#" method="POST" class="d-inline">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="submit"
+                                                                    class="btn btn-outline btn-danger btn-sm">Delete</button>
+                                                            </form>
+                                                        </td>
+                                                    </tr>
+                                                @empty
+                                                    <tr>
+                                                        <td colspan="9" class="text-center">No products found</td>
+                                                    </tr>
+                                                @endforelse
                                             </tbody>
                                         </table>
 
@@ -143,8 +161,60 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>Link Generator</h5>
+
+                            <div class="ibox-content">
+
+
+
+
+                                <p>Generate Link Result:</p>
+                                <div class="input-group">
+                                    <input type="text" class="form-control"
+                                        value="http://opendoorzweb.test/admin/show-link" readonly="">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="copyToClipboard('http://opendoorzweb.test/admin/show-link')">
+                                            <i class="fa fa-copy"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                                <hr>
+                                <div class="table-responsive text-center">
+                                    <p>Check Generated Link</p>
+                                    <a href="http://opendoorzweb.test/admin/show-link" target="_blank"
+                                        class="btn btn-primary btn-md my-4">Test</a>
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
+
+    <script>
+        function copyToClipboard(text) {
+            var tempInput = document.createElement("input");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+        }
+    </script>
 
 </x-layout_admin>
